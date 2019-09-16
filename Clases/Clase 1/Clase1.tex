@@ -1,0 +1,122 @@
+% Preambulo 
+
+% Tipo de documento
+%\documentclass[12pt,a4paper,twoside]{article}
+\documentclass{article}
+%Paquetes a utilizar
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{anysize}
+
+% Metadatos
+\title{Introduccción al curso de \LaTeX}
+\author{Armando Rivera}
+\date{\today}
+
+\marginsize{2cm}{2cm}{2cm}{2cm}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+%\hline
+\rule{\textwidth}{0.5pt}
+\begin{abstract}
+    Este documento ilustra los principales comandos de latex
+\end{abstract}
+
+
+\section{Objetivo}
+
+El objetivo  de esta practica es involucrar a las personas en latex\\
+El objetivo de esta practica es involucrar a las personas en latex
+
+\section*{Introduccion}
+
+Latex puede servir para crear\{ documentos \textit{cientificos} y \textbf{técnicos} solo tienes que $c^2$ \$ \textbf{\underline{intentarlo}}, \textsc{animate } 
+
+
+\addcontentsline{toc}{section}{Desarrollo}
+\section*{Desarrollo}
+
+\large Hola mi nombre es Rodrigo\\[2cm]
+Esta es la primera clase de Latex \\
+\normalsize El tamaño de la letra fue restaurado\\
+\Large \Huge  Este es un texto muy grande \normalsize
+
+\section{Resultados}
+
+\begin{center}
+    Este es un texto que esta centrado con el ambiente center
+\end{center}
+
+\begin{flushleft}
+    \lipsum
+\end{flushleft}
+
+\begin{flushright}
+    Este es un texto alineado a la derecha
+\end{flushright}
+
+%\vspace{2cm}
+
+\section{Conclusiones}
+
+\subsection{Conclusiones invidivuales}
+
+\begin{itemize}
+    \item Hoy aprendimos a crear listas sin orden
+    \item Apredimos acerca del formato de texto
+    \begin{itemize}
+        \item tamaños de letra
+        \begin{itemize}
+            \item Huge
+        \end{itemize}
+    \end{itemize}
+    
+    
+\end{itemize}
+\newpage
+\subsection{Conclusiones en equipo}
+    \renewcommand{\labelenumii}{\Roman{enumii}}
+    \renewcommand{\labelenumiii}{\Alph{enumiii}}
+    \begin{enumerate}
+        \item Todos los integrantes del curso son de la UNAM
+        \item Preferimos Latex que word
+        \item Los compiladores que se pueden hacer para Latex son
+        \begin{enumerate}
+            \item Miktex
+            \item Mactex
+            \item TexLive
+        \end{enumerate}
+        \item Los integrantes del curso son
+        \begin{enumerate}
+            \item Jorge
+            \begin{enumerate}
+                \item Procendia: UNAM
+                \item Procendia: UNAM
+            \end{enumerate}
+            \item Cassandra
+            \item Ariel
+            \item Gabriel
+        \end{enumerate}
+        \item Este texto es demasiado \\grande y por lo tanto no cabe en una linea de la viñeta
+        \item $\frac{12}{6} $
+    \end{enumerate}
+    
+    \renewcommand{\labelenumi}{\Roman{enumi}}
+    \begin{enumerate}
+        \item Frutas
+        \item harina
+        \item Marcadores
+    \end{enumerate}
+
+
+\end{document}
+
+El texto después de \end{document no se toma en cuenta} y \LaTeX lo ignora
