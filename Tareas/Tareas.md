@@ -9,3 +9,7 @@
 * Realizar un texto donde menciones qué uso le darás a tus conocimientos que adquieras en el curso y si te gustaría que se incluyera un nuevo tema que no esté en el temario, de ser así mencionarlo.
 
 * Terminar el ejercicio de la portada que se dejó en clase.
+
+## Tarea 2:
+
+* Haceren un archivo las ecuaciones matemáticas que se muestran en el pdf "Ejercicio 2"
