@@ -12,4 +12,7 @@
 
 ## Tarea 2:
 
-* Haceren un archivo las ecuaciones matemáticas que se muestran en el pdf "Ejercicio 2"
+* Haceren un archivo las ecuaciones matemáticas que se muestran en el pdf "Ejercicio 2"  
+
+## Tarea 3:
+* Hacer el ejercicio de Imágenes, tablas y creación de comandos
