@@ -1,0 +1,182 @@
+\documentclass{article}
+
+\include{preambulo}
+
+\begin{document}
+	
+	\renewcommand{\figurename}{Imagen}
+	\renewcommand{\tablename}{Tabla}
+	
+	\renewcommand{\listtablename}{Índice de tablas}
+	\renewcommand{\listfigurename}{Índice de imágenes}
+	\renewcommand{\contentsname}{Índice general}
+	
+%	\renewcommand{\tabcolsep}{10mm}
+%	\renewcommand{\arraystretch}{5}
+%	\renewcommand{\arrayrulewidth}{1mm}
+	
+	\tableofcontents
+	\listoffigures
+	\listoftables
+	
+	\section{Creación de comandos}
+	Aquí va un Vector $ \Vector $\\
+	Aquí hay otro vector $ \Vectorr{y} $\\
+	 aquí está otro vector $ \Vectorr{W} $\\
+	aquí está otro vector $ \Vectorrr{X}{W} $\\
+	aquí está otro vector $ \nuevoVector{t} $\\
+	\\
+	
+	$ 5.38 $
+	
+	\begin{gather}
+		 \sqrt[5]{x}\\
+		\prod_{i=0}^{n}\\\label{eq:Raiz}
+		\sqrt{x}\Leftrightarrow
+	\end{gather}
+	
+	Cómo se puede ver en la ecuación \ref{eq:Raiz}
+	
+	\section{Imágenes}
+	
+	\begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.5]{img/UNAM}
+		\caption{Logo UNAM}
+		\label{Fig:Logo}
+	\end{figure}
+	
+
+En la figura \ref{Fig:Logo} se muestra el escudo de la UNAM
+	\newpage
+	\begin{wrapfigure}[13]{l}[0mm]{0.35\textwidth}
+		\centering
+		\includegraphics[scale=0.5]{img/python}
+		\caption{Python}
+	\end{wrapfigure}
+	\lipsum
+	
+	\begin{figure}[ht]
+		\centering
+		\begin{subfigure}[t]{0.35\textwidth}
+			\includegraphics[scale=0.5]{img/latex}
+			\caption{Logo de \LaTeX}
+			\label{Fig:LaTeX}
+		\end{subfigure}
+	\hspace{10mm}
+		\begin{subfigure}[t]{0.35\textwidth}
+			\includegraphics[scale=0.25]{img/csh}
+			\caption{Logo de \LaTeX}
+			\label{fig:LogoCsh}
+		\end{subfigure}	
+	\caption{Logos}
+\end{figure}
+	El logo de \LaTeX se encuentra en la figura \ref{Fig:LaTeX}
+\section{Ambiente tabular}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{lr|c}
+		X	&	Y	&	AND\\
+		\hline
+		0	& 	0	&	0\\
+		0	& 	1	&	0\\
+		1	& 	0	&	0\\
+		1	& 	1	&	1\\
+	\end{tabular}
+\caption{Compuerta lógica AND}
+\label{Tab:AND}
+\end{table}
+
+En la tabla \ref{Tab:AND} se muestra la tabla de verdad de la compuerta lógica AND
+
+\begin{wraptable}{l}{0.4\textwidth}
+	\centering
+	\begin{tabular}{lr|c}
+		X	&	Y	&	AND\\
+		\hline
+		0	& 	0	&	0\\
+		0	& 	1	&	0\\
+		1	& 	0	&	0\\
+		1	& 	1	&	1\\
+	\end{tabular}
+	\caption{Wrap table}
+\end{wraptable}
+\lipsum
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{\textbf{Primera Medición}}
+		\\\hline
+		Nivel(cm)&Ángulo$\theta$\\\hline
+		0&28\\\hline
+		1&30\\\hline
+		2&33\\\hline
+		3&35\\\hline
+		4&37\\\hline
+		5&38.5\\\hline
+		6&41\\\hline
+		7&44\\\hline
+	\end{tabular}
+	\hspace{1cm}
+	\begin{tabular}{|c|c|}
+		\hline
+		\multicolumn{2}{|c|}{\textit{Primera Medición}}
+		\\\hline
+		Nivel(cm)&Ángulo$\theta$\\\hline
+		0&28\\\hline
+		1&30\\\hline
+		2&33\\\hline
+		3&35\\\hline
+		4&37\\\hline
+		5&38.5\\\hline
+		6&41\\\hline
+		7&44\\\hline
+	\end{tabular}
+\hspace{1cm}
+\begin{tabular}{|c|c|}
+	\hline
+	\multicolumn{2}{|c|}{Primera Medición}
+	\\\hline
+	Nivel(cm)&Ángulo$\theta$\\\hline
+	0&28\\\hline
+	1&30\\\hline
+	2&33\\\hline
+	3&35\\\hline
+	4&37\\\hline
+	5&38.5\\\hline
+	6&41\\\hline
+	7&44\\\hline
+\end{tabular}
+	\caption{Mediciones}
+\end{table}
+
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\multicolumn{6}{|c|}{Extremo a Extremo}\\\hline
+		\multicolumn{3}{|c|}{Primera Medición}&
+		\multicolumn{3}{c|}{Segunda Medición}\\\hline
+		Deflexión  $\theta[^\circ]$&Resistencia $[\Omega]$& Fuerza [N]&Deflexión  $\theta[^\circ]$&Resistencia $[k\Omega]$& Fuerza [N]\\\hline
+		0	&227	&0		&0		&272	&0\\\hline
+		3	&225.2	&0.25	&13		&272.2	&0.25\\\hline
+		6	&225	&0.5	&10		&275	&0.5\\\hline
+		9	&225	&0.75	&12		&273	&0.75\\\hline
+		11	&226.3	&1.1	&11		&272	&1\\\hline
+		12	&226.5	&1.25	&15		&273.3	&1.25\\\hline
+		13.5&226.5	&1.5	&18		&273.4	&1.5\\\hline
+		15	&227.2	&1.75	&20		&274.5	&1.75\\\hline
+		16	&228	&2		&24		&275.9	&2\\\hline
+		19	&228.6	&2.25	&26		&282	&2.25\\\hline
+	\end{tabular}
+	\caption{Datos tomados al medir la resistencia de Extremo a Extremo}
+	\label{Tab:E-E}
+\end{table}
+
+\lipsum
+\lipsum
+
+\end{document}
