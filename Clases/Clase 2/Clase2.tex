@@ -1,0 +1,105 @@
+\documentclass{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{ulem}
+\usepackage{soul}
+\usepackage{graphicx}
+\usepackage{vmargin}
+
+% Paquetes a utilizar en ambiente matemático
+\usepackage{amsmath, amssymb}
+
+\definecolor{MiColor}{rgb}{1,0.5, 0}
+
+\begin{document}
+	
+	\renewcommand{\figurename}{Imagen}
+	\renewcommand{\listfigurename}{Figuras}
+	
+	\listoffigures
+	\newpage
+	\textcolor{MiColor}{Hola mundo}\\
+	\uline{Hola mundo}\\
+	\uwave{Hola Mundo}\\
+	\xout{Hola Mundo}\\
+	\st{Hola Mundo}
+	
+	\section{Ambiente Matemático}
+	
+	
+	En \LaTeX  tenemos tres formas básicas de incluir ecuaciones en nuestros textos, la primera es \textit{inline} Si $ a> b $ y $ b>c \therefore a>c \ldots$\\
+	
+	$ a_n=a_{n+1} + a_{n+2} + a_{n+3}^2 $\\
+	$ f(x)=e^{(\alpha+x)}-c $\\
+	$ P(x)=A + \Lambda $
+	
+	$ \int_{-\infty}^{\infty} $
+
+\textbf{Modo display}
+
+\[
+	\int_{-\infty}^{\infty}P(X) dx
+\]
+
+\[
+	P(x)=\frac{Q(x)}{R(X)}
+\]
+
+\textbf{Ambiente equation}
+
+\begin{equation}	
+	\sqrt{x} \Leftrightarrow x^{\frac{1}{2}}
+	\label{eq: Raiz}		
+\end{equation}
+
+Según la ecuación \ref{eq: Raiz} la raiz cuadrada de x es x a la un medio
+
+\begin{align}
+	E(s)&=R(s)-B(s)\\
+	Y(s)&=E(s)G(s)\\
+	G(s)&=\frac{Y(s)}{E(s)}\label{eq:Ecuacion2}
+\end{align}
+
+Segun la ecuación \ref{eq:Ecuacion2}
+
+\section{Signos de agrupación}
+
+\{a+b\}\\
+$ \langle a+b \rangle \\
+\lvert a+b \rvert\\
+\lVert a+b \rVert\\
+\lfloor a+b \rfloor\\
+\lceil a+b \rceil$
+
+\[
+	h_\theta(x)=g\Bigg(\frac{1}{1+e^{(-\theta^Tx)}}\Bigg)
+\]
+
+\section{Matrices}
+
+\[
+	W(f_1, f_2)(x)=
+	\begin{pmatrix}
+	x^2 & x|x|\\
+	2x & \frac{2x^2}{|x|}
+	\end{pmatrix}
+\]
+
+\[
+	\sqrt[3]{5}
+\]
+
+\section{Incluir imágenes}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[scale=0.5, angle=0]{img/unam}
+	\caption{Escudo UNAM}
+	\label{fig:UNAM}
+\end{figure}
+
+El escudo de la UNAM se muestra en la figura \ref{fig:UNAM}
+
+\end{document}
