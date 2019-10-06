@@ -1,0 +1,116 @@
+\documentclass{article}
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{lipsum}
+\usepackage{vmargin}
+\usepackage{nameref}
+\usepackage[most]{tcolorbox}
+\usepackage{multicol}
+
+\definecolor{myBlue}{HTML}{1C7FBB}
+\definecolor{applegreen}{rgb}{0.55, 0.71, 0.0}
+\definecolor{myGreen}{HTML}{36A736}
+
+\begin{document}
+	
+	\section{Una sección} \label{UnaSeccioon}
+	\lipsum
+	\section{Otra sección}
+	\lipsum
+	
+	\section{Referencias}
+	En la página de la \textit{UNAM} puedes encontrar el calendario académico \\\url{https://unam.mx/}.\\ En la página de
+	\textcolor{myBlue}{\href{https://proteco.mx}{PROTECO}}
+	puedes encontrar una gran variedad de cursos de tecnología en computación.
+	
+	En la sección de \textcolor{myBlue}{\nameref{Resultados}} hay texto aleatorio
+	
+	\section{Resultados}\label{Resultados}
+	\lipsum
+	
+	\section{Fuentes}
+	\ttfamily Este es un teto en \LaTeX con la fuente typewriter\\
+	\sffamily Este es un texto en \LaTeX con la fuente sans serif\\
+	\rmfamily Este es un testo en \LaTeX con la fuente roman
+	
+	\section{Cajas}
+	\subsection{mbox y makebox}
+	\mbox{Este es un texto dentro de un mbox}\\
+	\makebox[0.8\textwidth][r]{Este es un texto dentro de un makebox}
+	
+	\subsection{fbox y framebox}
+	\fbox{Este es un texto dentro de un fbox}\\
+	\framebox[0.8\textwidth][c]{Aquí hay un texto dentro de un framebox, Este es un texto muy largo dentro de un framebox }
+	
+	\subsection{parbox}
+	\fbox{\parbox{0.5\textwidth}{Aquí hay un texto dentro de un parbox, este texto es muy largo y debe de caber dentro de mi caja}}
+	
+	\subsection{Cajas con coles}
+	
+	\colorbox{myBlue}{Este es un texto dentro de una caja azul}\\
+	\fcolorbox{red}{myGreen}{Este es un texto dentro de una caja verde}\\
+	\fcolorbox{applegreen}{myGreen}{\parbox{\textwidth
+		}{Este es un texto dentro de una caja verde con borde verde. Puedo incluir ecuaciones matemáticas $$ \int{dx}=x+C $$}}
+	
+	\begin{tcolorbox}[
+		colback = orange!30, %color de fondo
+		colframe = gray, 
+		arc = 3mm, 
+		width = 0.7\textwidth,
+		height = 40pt,	
+		boxrule = 5pt,
+		enhanced jigsaw,
+		drop shadow = {green}
+		]
+		Texto en un colorbox simple
+	\end{tcolorbox}
+	
+	\begin{tcolorbox}[
+		colback =blue!25, 
+		title = aquí hay una caja,
+		arc=3mm,
+		colframe=blue!85!black,
+		fonttitle=\ttfamily,
+		coltext=black,
+		coltitle=white,
+		drop shadow = {black!30},
+		enhanced jigsaw,
+		boxrule=3pt
+		]
+		
+		\lipsum[1-2]
+		La masa de la región S está definida por:
+		\[
+			\int\int_{S}\rho(x,y)dxdy
+		\]
+		Donde $ \rho(x,y) $ es la densidad de la superficie
+	\end{tcolorbox}
+	
+	\section{Columnas}
+	
+	Colocando dos columnas de texto
+	\twocolumn
+	\lipsum
+	\onecolumn
+	\lipsum
+	
+	
+	\begin{multicols}{3}
+		\lipsum
+		\lipsum
+	\end{multicols}
+\newpage
+	\section{Reglas}
+	
+	Un ejemplo de una regla\\
+	Regla: \rule{\textwidth}{2pt}\\
+	Otra regla: \rule{100pt}{5pt}\\
+	Una regla más: \rule[-5mm]{100pt}{7pt}\\
+	\noindent \rule{100pt}{5pt}\\
+	Una regla vertical \rule{7pt}{100pt}\\
+	Un cuadrado \rule{5pt}{5pt}
+	
+	
+\end{document}
